@@ -1,10 +1,11 @@
+import Main from "@/components/Main";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({
-    variable: "--font-inter-sans",
+const inter = Roboto({
+    variable: "--font-roboto-sans",
     subsets: ["latin"],
 });
 
@@ -20,10 +21,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-                <body className={`${inter.variable} antialiased`}>
+            <body className={`${inter.variable} antialiased`}>
                     <Navbar></Navbar>
-                    <main>{children}</main>
-                </body>
+                    <Main>{children}</Main>
+            </body>
         </html>
     );
 }
