@@ -1,11 +1,11 @@
 import Main from "@/components/Main";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Roboto({
-    variable: "--font-roboto-sans",
+const inter = Inter({
+    variable: "--font-inter-sans",
     subsets: ["latin"],
 });
 
