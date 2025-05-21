@@ -1,6 +1,7 @@
 "use client";
 import { Shield, Bug, Clock, Award } from "lucide-react";
 import SqPoint from "./ui/SqPoint";
+import { motion } from "motion/react";
 
 export default function AboutUs() {
     return (
@@ -31,7 +32,6 @@ export default function AboutUs() {
                 </h1>
             </div>
 
-            {/* Hero Image and Text */}
             <div className="flex flex-col md:flex-row gap-8 mb-8">
                 <div className="md:w-[55%]">
                     <img
@@ -55,34 +55,45 @@ export default function AboutUs() {
                         smile!
                     </p>
 
-                    {/* Stats Section */}
                     <div className="flex flex-wrap gap-2 mt-4">
-                        <div className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
+                        <motion.div
+                            initial={{ opacity: 0, y: -10, scale: 0.7 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.3 }} className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
                             <Shield className="h-6 w-6 text-zinc-800" />
                             <span className="font-bold">1,500+ </span>
                             <span className=" text-base">
                                 Homes Protected
                             </span>
-                        </div>
-                        <div className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10, scale: 0.7 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.3 }} className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
                             <Clock className="h-6 w-6 text-zinc-800" />
                             <span className="font-bold">15+ </span>
                             <span className=" text-base">
                                 Years of Expertise
                             </span>
-                        </div>
-                        <div className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10, scale: 0.7 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.3 }} className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
                             <Bug className="h-6 w-6 text-zinc-800" />
                             <span className="font-bold">25M+ </span>
                             <span className=" text-base">Bugs Busted</span>
-                        </div>
-                        <div className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10, scale: 0.7 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.3 }}   className="flex items-center bg-zinc-100/60 border-3 px-2.5 rounded-full py-1 gap-2">
                             <Award className="h-6 w-6 text-zinc-800" />
                             <span className="font-bold">99.9% </span>
                             <span className=" text-base">
                                 Pest-Free Success Rate
                             </span>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
