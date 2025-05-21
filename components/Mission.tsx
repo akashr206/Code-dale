@@ -4,11 +4,11 @@ const Mission = () => {
         <section className="pb-10 max-md:pt-[50px] max-md:px-3 pt-[100px] px-10">
             <div className="flex flex-col gap-10 p-10 max-md:px-3 bg-zinc-900 text-white rounded-md">
                 <div className="flex text-4xl max-md:text-[28px] flex-col gap-10">
-                    <h2 className=" w-[600px] font-semibold">
+                    <h2 className=" max-w-[600px] font-semibold">
                         Your local pest control experts with a mission to make
                         every home and business pest-free!
                     </h2>
-                    <h2 className=" w-[600px] font-semibold">
+                    <h2 className=" max-w-[600px] font-semibold">
                         We’re problem solvers! We’ve spent over a decade
                         perfecting our craft
                     </h2>

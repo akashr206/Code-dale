@@ -4,7 +4,7 @@ import SqPoint from "./ui/SqPoint";
 
 export default function AboutUs() {
     return (
-        <div className=" mx-auto py-[100px] max-md:py-[50px] max-md:px-[10px] px-[40px] font-sans">
+        <section className=" mx-auto py-[100px] max-md:py-[50px] max-md:px-[10px] px-[40px] ">
             <div className="flex items-center bg-zinc-200/50 w-max px-2 rounded-full gap-1.5 mb-4">
                 <SqPoint />
                 <p className="font-medium text-sm">About Us</p>
@@ -86,6 +86,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
