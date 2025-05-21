@@ -23,9 +23,9 @@ const Blogs = () => {
                 </div>
             </div>
             <div className="flex gap-2">
-                <Card />
-                <Card />
-                <Card />
+                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
+                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
+                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
             </div>
             <div>
                 <Button>Explore all Blogs</Button>

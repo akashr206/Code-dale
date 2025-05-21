@@ -8,6 +8,7 @@ import Life from "@/components/Life";
 import HowWorks from "@/components/HowWorks";
 import ProjectGallery from "@/components/ProjectGallery";
 import Blogs from "@/components/Blogs";
+import FAQ from "@/components/FAQ";
 export default function Home() {
     return (
         <div className="font-[family-name:var(--font-inter-sans)] relative">
@@ -21,6 +22,7 @@ export default function Home() {
             <HowWorks />
             <ProjectGallery />
             <Blogs />
+            <FAQ />
         </div>
     );
 }
