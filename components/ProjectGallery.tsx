@@ -1,10 +1,29 @@
-import React from "react";
+"use client";
+import { useState, useEffect, useRef } from "react";
 import SqPoint from "./ui/SqPoint";
 import Image from "next/image";
+import { motion, useScroll } from "framer-motion";
 const ProjectGallery = () => {
+    const sectionRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "end center"],
+    });
+    const [value, setValue] = useState(0);
+
+    useEffect(() => {
+        const unsubscribe = scrollYProgress.on("change", (v) => {
+            setValue(v < 0.5 ? 0 : 1);
+        });
+
+        return () => unsubscribe();
+    }, [scrollYProgress]);
     return (
-        <section className=" py-[100px] max-md:py-[50px] max-md:px-[10px] px-[40px] ">
-            <div className="bg-[rgb(11_23_20)] rounded-lg pt-[50px] flex flex-col items-center text-center p-5 text-white gap-10 ">
+        <section
+            ref={sectionRef}
+            className=" py-[100px] max-md:py-[50px] relative h-[200vh] max-md:px-[10px] px-[40px] "
+        >
+            <div className="bg-[rgb(11_23_20)] sticky top-30 rounded-lg pt-[50px] flex flex-col items-center text-center p-5 text-white gap-10 ">
                 <div className="flex flex-col items-center text-center gap-1">
                     <div className="flex items-center bg-zinc-700/50 w-max px-2 rounded-full gap-1.5 mb-4">
                         <SqPoint color={"bg-primary"} />
@@ -21,38 +40,61 @@ const ProjectGallery = () => {
                         pest-free home or business.
                     </p>
                 </div>
-                <div className="h-[344px] flex gap-2 justify-center">
-                    <div className="max-md:hidden">
+                <div className="h-[344px] w-full flex gap-2 justify-center">
+                    <div className="max-md:hidden w-full">
                         <Image
                             alt="gallery"
                             src="/gallery1.avif"
-                            className="h-full w-auto rounded-md object-cover"
+                            className="h-full w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
                     </div>
-                    <div>
+                    <div className="w-full">
                         <Image
                             alt="gallery"
                             src="/gallery2.avif"
-                            className="h-full w-auto rounded-md object-cover"
+                            className="h-full w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
                     </div>
-                    <div className="self-center">
-                        <div className="w-[170px] flex items-center justify-center text-sm font-medium h-[170px] bg-primary rounded-full self-center text-[rgb(11_23_20)]"> VIEW GALLERY</div>
+
+                    <div className="h-full flex items-center justify-center">
+                        <motion.div
+                            initial={{
+                                scale: 0,
+                                filter: "blur(10px)",
+                            }}
+                            animate={{
+                                opacity: value,
+                                scale: value,
+                                width: value * 170,
+                                height: value * 170,
+                                filter: "blur(0px)",
+                            }}
+                            transition={{
+                                duration: 1,
+                                ease: [0, 0.4, 0.26, 0.25],
+                            }}
+                            style={{ scale: value }}
+                            className=" flex items-center justify-center text-sm font-medium bg-primary rounded-full text-[rgb(11_23_20)]"
+                        >
+                            {" "}
+                            VIEW GALLERY
+                        </motion.div>
                     </div>
-                    <div>
+
+                    <div className="w-full">
                         <Image
                             alt="gallery"
                             src="/gallery1.avif"
-                            className="h-full w-auto rounded-md object-cover"
+                            className="h-full w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
                     </div>
-                    <div className="max-md:hidden">
+                    <div className="max-md:hidden w-full">
                         <Image
                             alt="gallery"
                             src="/gallery2.avif"

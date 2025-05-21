@@ -23,12 +23,29 @@ const Blogs = () => {
                 </div>
             </div>
             <div className="flex gap-2">
-                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
-                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
-                <Card title="Top most 7" image="/blog1.avif" date={"June 6, "} />
+                <Card
+                    title="Top most 7"
+                    image="/blog1.avif"
+                    date={"June 6, "}
+                />
+                <Card
+                    title="Top most 7"
+                    image="/blog1.avif"
+                    date={"June 6, "}
+                />
+                <Card
+                    title="Top most 7"
+                    image="/blog1.avif"
+                    date={"June 6, "}
+                />
             </div>
             <div>
-                <Button>Explore all Blogs</Button>
+                <Button
+                    secondaryColor="bg-black"
+                    secondaryTextColor="text-gray-50"
+                >
+                    Explore all Blogs
+                </Button>
             </div>
         </section>
     );

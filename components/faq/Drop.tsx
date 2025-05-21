@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
 const Drop = ({

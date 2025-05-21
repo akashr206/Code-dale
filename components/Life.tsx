@@ -6,7 +6,7 @@ const Life = () => {
     const sectionRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: sectionRef,
-        offset: ["start center", "end center"],
+        offset: ["start end", "end center"],
     });
 
     const scale = useTransform(scrollYProgress, [0, 0.5], [1.2, 1]);

@@ -87,13 +87,14 @@ const HowWorks = () => {
 
         <motion.div
           style={{ backgroundColor: bg0, color: text0 }}
-          className="md:h-[180px] p-2.5 w-full bg-zinc-100/50 rounded-lg max-w-[700px]"
+          transition={{ duration: 0.5 }}
+          className="md:h-[180px] p-2.5 w-full transition-all duration-400 bg-zinc-100/50 rounded-lg max-w-[700px]"
         >
-          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start max-md:gap-0 items-center h-full">
+          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start items-center h-full">
             <div className="md:flex-1/2 flex items-center gap-2">
-              <Button className="px-2 md:hidden pointer-events-none py-2 flex gap-1 text-sm items-center">
+              <div className="px-2 md:hidden text-black py-2 flex gap-1 text-sm items-center bg-primary rounded-lg">
                 <MessageSquare className="w-5" /> STEP 1
-              </Button>
+              </div>
               <h3 className="text-xl max-md:text-lg h-max font-semibold">
                 Request a Free Consultation
               </h3>
@@ -106,13 +107,14 @@ const HowWorks = () => {
 
         <motion.div
           style={{ backgroundColor: bg1, color: text1 }}
-          className="md:h-[180px] p-2.5 w-full bg-zinc-100/50 rounded-lg max-w-[700px]"
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="md:h-[180px] p-2.5 w-full transition-all duration-400 bg-zinc-100/50 rounded-lg max-w-[700px]"
         >
-          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start max-md:gap-0 items-center h-full">
+          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start items-center h-full">
             <div className="md:flex-1/2 flex items-center gap-2">
-              <Button className="px-2 md:hidden py-2 flex gap-1 text-sm items-center">
+              <div className="px-2 md:hidden text-black py-2 flex gap-1 text-sm items-center bg-primary rounded-lg">
                 <MessageSquare className="w-5" /> STEP 2
-              </Button>
+              </div>
               <h3 className="text-xl max-md:text-lg h-max font-semibold">
                 Get Your Customized Plan
               </h3>
@@ -125,13 +127,14 @@ const HowWorks = () => {
 
         <motion.div
           style={{ backgroundColor: bg2, color: text2 }}
-          className="md:h-[180px] p-2.5 w-full bg-zinc-100/50 rounded-lg max-w-[700px]"
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="md:h-[180px] p-2.5 w-full transition-all duration-400 bg-zinc-100/50 rounded-lg max-w-[700px]"
         >
-          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start max-md:gap-0 items-center h-full">
+          <div className="flex p-2 gap-3 max-md:flex-col max-md:items-start items-center h-full">
             <div className="md:flex-1/2 flex items-center gap-2">
-              <Button className="px-2 md:hidden py-2 flex gap-1 text-sm items-center">
+              <div className="px-2 md:hidden py-2 text-black flex gap-1 text-sm items-center bg-primary rounded-lg">
                 <MessageSquare className="w-5" /> STEP 3
-              </Button>
+              </div>
               <h3 className="text-xl max-md:text-lg h-max font-semibold">
                 Sit Back & Relax
               </h3>
@@ -144,7 +147,7 @@ const HowWorks = () => {
       </div>
 
       <div>
-        <Button>Get in touch</Button>
+        <Button secondaryColor="bg-black" secondaryTextColor="text-gray-50">Get in touch</Button>
       </div>
     </section>
   );

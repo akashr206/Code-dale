@@ -6,7 +6,7 @@ export const Button = ({
     children,
     className,
     secondaryColor = "bg-gray-50",
-    secondaryTextColor = "text-black",
+    secondaryTextColor = "text-zinc-950",
 }: Readonly<{
     children: React.ReactNode;
     className?: string;
@@ -56,7 +56,7 @@ export const Button = ({
                     ease: "easeOut" 
                 }}
             >
-                <span className="text-primary-foreground">{children}</span>
+                <span>{children}</span>
             </motion.div>
 
             <span className="opacity-0">{children}</span>
