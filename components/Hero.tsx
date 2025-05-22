@@ -24,7 +24,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="flex w-full pb-10 h-max md:h-[700px]">
+            <div className="flex w-full pb-10 h-max lg:h-[700px]">
                 <div className="flex gap-4 w-full max-lg:flex-col">
                     <div className="lg:w-[65%] max-lg:h-[655px] relative">
                         <motion.div
@@ -63,7 +63,7 @@ const Hero = () => {
                             className="rounded-lg object-cover max-md:h-[655px] w-full h-full"
                         />
                     </div>
-                    <div className="lg:w-[35%] max-lg:h-[35%] max-md:h-[360px]">
+                    <div className="lg:w-[35%] max-lg:h-[360px]">
                         <Image
                             width={490}
                             height={660}
