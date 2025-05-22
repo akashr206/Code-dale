@@ -24,7 +24,7 @@ const Drop = ({
     if (contentRef.current) {
       setContentHeight(contentRef.current.scrollHeight);
     }
-  }, [description]);
+  }, [description, open]);
 
   return (
     <div 
@@ -66,10 +66,10 @@ const Drop = ({
             delay: open ? 0.1 : 0
           }
         }}
-        className="bg-white overflow-hidden"
+        className="bg-white overflow-hidden h-max"
       >
-        <div ref={contentRef} className="p-5 text-zinc-600">
-          {description}
+          <div ref={contentRef} className="p-5 h-max text-zinc-600">
+            {description}
         </div>
       </motion.div>
     </div>

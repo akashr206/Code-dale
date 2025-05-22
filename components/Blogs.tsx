@@ -22,21 +22,22 @@ const Blogs = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex w-full max-md:flex-col max-md:gap-6 gap-2">
                 <Card
-                    title="Top most 7"
+                    title="Top 7 Pest Control Tips for a Bug-Free Home"
                     image="/blog1.avif"
-                    date={"June 6, "}
+                    date={"June 6, 2024"}
                 />
                 <Card
-                    title="Top most 7"
-                    image="/blog1.avif"
-                    date={"June 6, "}
+                    title="EcoGuard Pest Repellent Spray: Safe for Your Family and Pets"
+                    image="/blog2.avif"
+                    date={"September 2, 2024"}
                 />
-                <Card
-                    title="Top most 7"
+                <Card   
+                    className="max-lg:hidden max-md:flex"
+                    title="New Innovations in Pest Control: What’s Coming in 2024"
                     image="/blog1.avif"
-                    date={"June 6, "}
+                    date={"June 6, 2024"}
                 />
             </div>
             <div>

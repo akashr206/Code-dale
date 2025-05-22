@@ -1,4 +1,3 @@
-import React from "react";
 import SqPoint from "./ui/SqPoint";
 import Card from "./testimonial/Card";
 import Marquee from "react-fast-marquee";
@@ -10,7 +9,7 @@ const Testimonials = () => {
                 <div className="flex items-center bg-zinc-200/50 w-max px-2 rounded-full gap-1.5">
                     <SqPoint />
                     <p className="font-medium text-sm">Customer Stories</p>
-                    <SqPoint />
+                    <SqPoint /> 
                 </div>
                 <h1 className="text-5xl max-md:text-[30px] font-semibold">
                     What our happy customers are buzzing about!
@@ -18,7 +17,7 @@ const Testimonials = () => {
             </div>
             <div className="w-full">
                 <div className="max-w-[calc(100vw-16px)] bg-gray-50 rounded-xl py-5">
-                    <Marquee className="p-[10px]" gradient={false} speed={80}>
+                    <Marquee pauseOnHover={true} className="p-[10px]" gradient={false} speed={80}>
                         <Card
                             title="No More Creepy Crawlies!"
                             message="I used to dread going into the basement, but thanks to these guys, I haven’t seen a single bug in months! Super friendly service, and they were in and out in no time. Highly recommend!"

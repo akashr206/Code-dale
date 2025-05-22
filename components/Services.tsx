@@ -4,7 +4,7 @@ import { Button } from "./ui/Button";
 const Services = () => {
     return (
         <section className="py-5 px-3 md:px-10">
-            <div className="bg-[#0B1714] flex flex-col gap-10 items-center text-white rounded-md pt-20 pb-[60px] px-16 max-md:px-3">
+            <div className="bg-[#0B1714] flex flex-col gap-10 items-center text-white rounded-md pt-20 pb-[60px] px-10 max-md:px-3">
                 <div className="flex flex-col items-center">
                     <div className="flex items-center bg-zinc-700/50 w-max px-2 rounded-full gap-1.5 mb-4">
                         <SqPoint color={"bg-primary"} />

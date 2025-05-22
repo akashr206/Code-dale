@@ -28,7 +28,7 @@ const ProjectGallery = () => {
                     <div className="flex items-center bg-zinc-700/50 w-max px-2 rounded-full gap-1.5 mb-4">
                         <SqPoint color={"bg-primary"} />
                         <p className="font-medium text-sm text-primary">
-                            Our Services
+                            Project Gallery
                         </p>
                         <SqPoint color={"bg-primary"} />
                     </div>
@@ -40,21 +40,32 @@ const ProjectGallery = () => {
                         pest-free home or business.
                     </p>
                 </div>
-                <div className="h-[344px] w-full flex gap-2 justify-center">
-                    <div className="max-md:hidden w-full">
+                <div className="h-[344px] w-full relative flex gap-2 justify-center">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: value - 0.5 }}
+                        transition={{
+                            duration: 0.8,
+                            type: "spring",
+                            stiffness: 190,
+                            damping: 20,
+                        }}
+                        className="absolute inset-0 top-0 left-0 w-full h-full bg-zinc-900"
+                    ></motion.span>
+                    <div className="max-md:hidden overflow-hidden w-full">
                         <Image
                             alt="gallery"
                             src="/gallery1.avif"
-                            className="h-full w-full rounded-md object-cover"
+                            className="h-[500px] w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full overflow-hidden rounded-md">
                         <Image
                             alt="gallery"
                             src="/gallery2.avif"
-                            className="h-full w-full rounded-md object-cover"
+                            className="h-[500px] w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
@@ -73,32 +84,51 @@ const ProjectGallery = () => {
                                 height: value * 170,
                                 filter: "blur(0px)",
                             }}
-                            transition={{
-                                duration: 1,
-                                ease: [0, 0.4, 0.26, 0.25],
+                            whileHover={{
+                                scale: 0.8,
+                                transition: {
+                                    type: "spring",
+                                    stiffness: 190,
+                                    damping: 20,
+                                },
                             }}
-                            style={{ scale: value }}
-                            className=" flex items-center justify-center text-sm font-medium bg-primary rounded-full text-[rgb(11_23_20)]"
+                            transition={{
+                                duration: 0.8,
+                                stiffness: 260,
+                                damping: 120,
+                            }}
+                            className=" flex items-center cursor-pointer justify-center text-sm font-medium bg-primary rounded-full text-[rgb(11_23_20)]"
                         >
                             {" "}
-                            VIEW GALLERY
+                            <motion.p
+                                animate={{ opacity: value, scale: value }}
+                                transition={{
+                                    duration: 0.8,
+                                    type: "spring",
+                                    stiffness: 190,
+                                    damping: 20,
+                                }}
+                                className="text-sm font-medium bg-primary rounded-full text-[rgb(11_23_20)]"
+                            >
+                                VIEW GALLERY
+                            </motion.p>
                         </motion.div>
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full overflow-hidden rounded-md">
                         <Image
                             alt="gallery"
                             src="/gallery1.avif"
-                            className="h-full w-full rounded-md object-cover"
+                            className="h-[500px] w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>
                     </div>
-                    <div className="max-md:hidden w-full">
+                    <div className="max-md:hidden w-full overflow-hidden rounded-md">
                         <Image
                             alt="gallery"
                             src="/gallery2.avif"
-                            className="h-full w-auto rounded-md object-cover"
+                            className="h-[500px] w-full rounded-md object-cover"
                             width={344}
                             height={344}
                         ></Image>

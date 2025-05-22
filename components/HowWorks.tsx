@@ -73,7 +73,7 @@ const HowWorks = () => {
         <div className="border-1 max-md:hidden border-dashed border-black h-[164px] absolute top-16 left-[57px]">
           <motion.div
             style={{ translateY }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            transition={{ duration: 1.2, type: "spring", damping: 200, stiffness: 20 }}
             className="bg-black h-2 w-2 rounded-full absolute top-0 left-0 -translate-x-1/2"
           />
         </div>

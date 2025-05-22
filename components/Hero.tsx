@@ -24,14 +24,14 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="flex w-full pb-10 h-[700px]">
+            <div className="flex w-full pb-10 h-max md:h-[700px]">
                 <div className="flex gap-4 w-full max-lg:flex-col">
-                    <div className="lg:w-[65%] max-lg:h-[65%] relative">
+                    <div className="lg:w-[65%] max-lg:h-[655px] relative">
                         <motion.div
                             initial={{ opacity: 0, y: -10, scale: 0.7 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="flex gap-4 absolute bg-gray-50/20 backdrop-blur-lg md:w-4/5 rounded-xl border border-border/20 p-4 bottom-0 left-0 m-4"
+                            className="flex gap-4 absolute bg-gray-50/20 backdrop-blur-lg md:w-4/5 rounded-xl border border-border/20 p-4 bottom-0 left-0 m-4 max-md:flex-col"
                         >
                             <div className="shrink-0">
                                 <Image
@@ -60,10 +60,10 @@ const Hero = () => {
                             height={660}
                             alt="hero"
                             src="/hero-1.avif"
-                            className="rounded-lg object-cover w-full h-full"
+                            className="rounded-lg object-cover max-md:h-[655px] w-full h-full"
                         />
                     </div>
-                    <div className="lg:w-[35%] max-lg:h-[35%]">
+                    <div className="lg:w-[35%] max-lg:h-[35%] max-md:h-[360px]">
                         <Image
                             width={490}
                             height={660}
